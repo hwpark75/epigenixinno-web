@@ -1,953 +1,543 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Epigenix Innovation — US FDA Registration</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<title>Epigenix Innovation — Bio-efficacy CRO for Human &amp; Animal Health</title>
+<meta name="description" content="Two pillars of contract research: human bio-efficacy studies from efficacy and toxicity to human trials, and animal health studies from efficacy and target animal safety to field trials, diagnostic kit evaluation and registration.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
   :root {
-    --navy: #0B1E3D;
-    --navy-deep: #071527;
-    --navy-mid: #122548;
-    --gold: #C09B5B;
-    --gold-light: #D4B47A;
-    --gold-pale: #F2E8D5;
-    --cream: #F8F4EE;
-    --white: #FFFFFF;
-    --text-primary: #0B1E3D;
-    --text-secondary: #4A5568;
-    --text-muted: #8A9BB5;
-    --border-subtle: rgba(192,155,91,0.2);
-    --border-gold: rgba(192,155,91,0.5);
-    --font-serif: 'Playfair Display', Georgia, serif;
-    --font-serif-2: 'Cormorant Garamond', Georgia, serif;
-    --font-sans: 'DM Sans', sans-serif;
-    --transition: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    --navy: #0B1E3D; --navy-deep: #071527; --navy-mid: #122548;
+    --gold: #C09B5B; --gold-light: #D4B47A; --gold-pale: #F4ECDD; --gold-dark: #94723A;
+    --cream: #F8F4EE; --white: #FFFFFF;
+    --text: #0B1E3D; --text-2: #4A5568; --text-3: #6B7686;
+    --line: rgba(11,30,61,0.12); --line-gold: rgba(192,155,91,0.25);
+    --serif: 'Playfair Display', Georgia, serif;
+    --serif-2: 'Cormorant Garamond', Georgia, serif;
+    --sans: 'DM Sans', system-ui, sans-serif;
+    --mono: 'DM Mono', ui-monospace, monospace;
+    --ease: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
-
   html { scroll-behavior: smooth; }
+  body { font-family: var(--sans); background: var(--cream); color: var(--text); font-size: 15px; line-height: 1.65; overflow-x: hidden; }
+  .container { max-width: 1180px; margin: 0 auto; padding: 0 40px; width: 100%; }
+  section { padding: 100px 0; scroll-margin-top: 72px; }
 
-  body {
-    font-family: var(--font-sans);
-    background: var(--cream);
-    color: var(--text-primary);
-    overflow-x: hidden;
-    font-size: 15px;
-    line-height: 1.7;
-  }
+  .eyebrow { display: flex; align-items: center; gap: 14px; margin-bottom: 18px; }
+  .eyebrow::before { content: ''; width: 32px; height: 1px; background: var(--gold); }
+  .eyebrow span { font-size: 10.5px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); }
+  h2.title { font-family: var(--serif); font-weight: 400; font-size: clamp(28px, 3.8vw, 42px); line-height: 1.2; letter-spacing: -0.01em; }
+  h2.title em, h1 em { font-family: var(--serif-2); font-style: italic; font-weight: 300; color: var(--gold); }
+  .lead { color: var(--text-2); font-weight: 300; font-size: 16px; max-width: 720px; margin-top: 16px; }
+  .dark { color: var(--white); }
+  .dark .lead { color: rgba(255,255,255,0.62); }
 
-  /* ─── NAV ─── */
-  nav {
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    z-index: 100;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 60px;
-    height: 72px;
-    background: rgba(7,21,39,0.97);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(192,155,91,0.15);
-    transition: var(--transition);
-  }
+  .btn { display: inline-block; font-family: var(--sans); font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 500; padding: 15px 30px; border-radius: 2px; border: 1px solid var(--gold); cursor: pointer; text-decoration: none; transition: all var(--ease); }
+  .btn-gold { background: var(--gold); color: var(--navy-deep); }
+  .btn-gold:hover { background: var(--gold-light); transform: translateY(-2px); }
+  .btn-line { background: transparent; color: var(--gold-light); }
+  .btn-line:hover { background: rgba(192,155,91,0.12); }
+  .text-link { font-size: 13px; font-weight: 500; color: var(--gold-dark); text-decoration: none; border-bottom: 1px solid rgba(192,155,91,0.5); padding-bottom: 2px; }
+  .text-link:hover { color: var(--navy); border-color: var(--navy); }
 
-  .nav-logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    text-decoration: none;
-  }
-
-  .nav-logo-mark {
-    width: 36px;
-    height: 36px;
-    background: linear-gradient(135deg, var(--gold), var(--gold-light));
-    border-radius: 4px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: Arial, sans-serif;
-    font-size: 13px;
-    font-weight: 700;
-    color: var(--navy-deep);
-    letter-spacing: 0.5px;
-    flex-shrink: 0;
-  }
-
-  .nav-logo-text {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.1;
-  }
-  .nav-logo-text .name {
-    font-family: var(--font-serif);
-    font-size: 15px;
-    font-weight: 600;
-    color: var(--white);
-    letter-spacing: 0.02em;
-  }
-  .nav-logo-text .sub {
-    font-size: 10px;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--gold);
-    font-weight: 400;
-  }
-
-  .nav-links {
-    display: flex;
-    align-items: center;
-    gap: 36px;
-    list-style: none;
-  }
-  .nav-links a {
-    font-size: 13px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: rgba(255,255,255,0.7);
-    text-decoration: none;
-    font-weight: 400;
-    transition: color var(--transition);
-    position: relative;
-  }
-  .nav-links a::after {
-    content: '';
-    position: absolute;
-    bottom: -3px;
-    left: 0;
-    width: 0;
-    height: 1px;
-    background: var(--gold);
-    transition: width var(--transition);
-  }
+  /* NAV */
+  nav.top { position: fixed; inset: 0 0 auto 0; z-index: 100; height: 72px; background: rgba(7,21,39,0.97); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(192,155,91,0.15); }
+  .nav-inner { height: 100%; display: flex; align-items: center; justify-content: space-between; }
+  .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+  .logo-mark { width: 36px; height: 36px; border-radius: 4px; background: linear-gradient(135deg, var(--gold), var(--gold-light)); display: grid; place-items: center; font: 700 13px Arial, sans-serif; color: var(--navy-deep); flex-shrink: 0; }
+  .logo-text { display: flex; flex-direction: column; line-height: 1.15; }
+  .logo-text b { font-family: var(--serif); font-weight: 600; font-size: 15px; color: var(--white); }
+  .logo-text small { font-size: 9.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); }
+  .nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
+  .nav-links a { font-size: 12.5px; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.75); text-decoration: none; transition: color var(--ease); }
   .nav-links a:hover { color: var(--gold-light); }
-  .nav-links a:hover::after { width: 100%; }
+  .nav-links .nav-cta { color: var(--gold); border: 1px solid rgba(192,155,91,0.5); padding: 8px 18px; border-radius: 2px; }
+  .nav-links .nav-cta:hover { background: var(--gold); color: var(--navy-deep); }
+  .menu-btn { display: none; background: none; border: 0; cursor: pointer; width: 40px; height: 40px; }
+  .menu-btn span { display: block; width: 22px; height: 1.5px; background: var(--gold-light); margin: 5px auto; }
 
-  .nav-cta {
-    font-size: 12px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--gold) !important;
-    border: 1px solid rgba(192,155,91,0.5);
-    padding: 8px 20px;
-    border-radius: 2px;
-    transition: all var(--transition) !important;
-  }
-  .nav-cta:hover {
-    background: var(--gold) !important;
-    color: var(--navy-deep) !important;
-  }
-  .nav-cta::after { display: none !important; }
+  /* HERO */
+  .hero { background: var(--navy-deep); position: relative; overflow: hidden; padding: 160px 0 100px; }
+  .hero-grid { position: absolute; inset: 0; background-image: linear-gradient(rgba(192,155,91,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(192,155,91,0.04) 1px, transparent 1px); background-size: 80px 80px; animation: drift 24s linear infinite; }
+  @keyframes drift { to { transform: translate(80px, 80px); } }
+  .hero .container { position: relative; z-index: 2; }
+  .hero h1 { font-family: var(--serif); font-weight: 400; font-size: clamp(36px, 5vw, 62px); line-height: 1.1; color: var(--white); max-width: 860px; margin-bottom: 24px; }
+  .hero h1 em { color: var(--gold-light); }
+  .hero p.sub { color: rgba(255,255,255,0.62); font-weight: 300; font-size: 17px; max-width: 660px; margin-bottom: 56px; }
+  .pillar-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .pcard { display: block; text-decoration: none; border: 1px solid rgba(192,155,91,0.3); border-radius: 12px; padding: 34px 34px 30px; background: rgba(255,255,255,0.03); transition: all var(--ease); }
+  .pcard:hover { border-color: var(--gold); background: rgba(192,155,91,0.07); transform: translateY(-3px); }
+  .pcard .num { font-family: var(--mono); font-size: 11px; letter-spacing: 0.14em; color: var(--gold); text-transform: uppercase; }
+  .pcard h3 { font-family: var(--serif); font-weight: 400; font-size: 28px; color: var(--white); margin: 10px 0 10px; }
+  .pcard p { color: rgba(255,255,255,0.65); font-weight: 300; font-size: 14.5px; }
+  .pcard .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+  .pcard .chips span { font-family: var(--mono); font-size: 11px; color: var(--gold-light); border: 1px solid rgba(192,155,91,0.35); border-radius: 20px; padding: 3px 11px; }
+  .pcard .go { display: inline-block; margin-top: 24px; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-light); }
+  .fade { opacity: 0; animation: up 0.8s ease forwards; }
+  .d1 { animation-delay: .15s } .d2 { animation-delay: .3s } .d3 { animation-delay: .45s } .d4 { animation-delay: .6s }
+  @keyframes up { from { opacity: 0; transform: translateY(22px); } to { opacity: 1; transform: none; } }
 
-  /* ─── HERO ─── */
-  .hero {
-    min-height: 100vh;
-    background: var(--navy-deep);
-    position: relative;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-  }
+  /* PILLAR SECTIONS */
+  .pillar { background: var(--cream); }
+  .pillar.alt { background: var(--white); }
+  .pillar-head { display: grid; grid-template-columns: 1fr auto; gap: 30px; align-items: end; padding-bottom: 34px; border-bottom: 1px solid var(--line-gold); margin-bottom: 40px; }
+  .pillar-no { display: inline-flex; align-items: center; gap: 12px; font-family: var(--mono); font-size: 12px; letter-spacing: 0.12em; color: var(--gold-dark); text-transform: uppercase; margin-bottom: 14px; }
+  .pillar-no b { width: 34px; height: 34px; border-radius: 50%; background: var(--navy); color: var(--gold-light); display: grid; place-items: center; font-family: var(--serif-2); font-style: italic; font-size: 18px; font-weight: 400; letter-spacing: 0; }
 
-  .hero-bg-grid {
-    position: absolute;
-    inset: 0;
-    background-image:
-      linear-gradient(rgba(192,155,91,0.04) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(192,155,91,0.04) 1px, transparent 1px);
-    background-size: 80px 80px;
-    animation: gridShift 20s linear infinite;
-  }
-  @keyframes gridShift {
-    0% { transform: translate(0,0); }
-    100% { transform: translate(80px,80px); }
-  }
+  /* CARDS */
+  .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; align-items: stretch; }
+  .cards.two { grid-template-columns: repeat(2, 1fr); margin-top: 18px; }
+  .card { background: var(--white); border: 1px solid var(--line); border-radius: 12px; display: flex; flex-direction: column; overflow: hidden; }
+  .pillar.alt .card { background: var(--cream); }
+  .card-head { padding: 24px 24px 22px; flex: 1; }
+  .ctag { font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em; color: var(--gold-dark); }
+  .card-head h3 { font-family: var(--sans); font-weight: 600; font-size: 20px; line-height: 1.3; margin: 8px 0 10px; color: var(--navy); }
+  .card-head p { font-size: 13.5px; color: var(--text-2); font-weight: 300; line-height: 1.6; }
+  .item { display: grid; grid-template-columns: 1fr auto; gap: 3px 14px; padding: 15px 24px; border-top: 1px solid var(--line); }
+  .item .n { font-size: 14px; font-weight: 500; color: var(--navy); line-height: 1.4; }
+  .item .p { font-size: 14.5px; font-weight: 600; color: var(--navy); text-align: right; white-space: nowrap; }
+  .item .s { font-size: 12px; color: var(--text-3); line-height: 1.45; }
+  .item .t { font-family: var(--mono); font-size: 11px; color: var(--gold-dark); text-align: right; white-space: nowrap; }
+  .fine { margin-top: 18px; font-size: 12.5px; color: var(--text-3); font-weight: 300; max-width: 980px; }
 
-  .hero-accent-line {
-    position: absolute;
-    left: 0; top: 0; bottom: 0;
-    width: 4px;
-    background: linear-gradient(to bottom, transparent, var(--gold), transparent);
-    animation: lineGlow 3s ease-in-out infinite alternate;
-  }
-  @keyframes lineGlow {
-    from { opacity: 0.4; }
-    to { opacity: 1; }
-  }
+  /* AGENCY STRIP */
+  .agencies { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-bottom: 40px; }
+  .agency { border-radius: 12px; background: var(--navy); color: var(--white); padding: 22px 24px; }
+  .agency .ab { font-family: var(--mono); font-size: 11px; color: var(--gold-light); letter-spacing: 0.08em; }
+  .agency b { display: block; font-family: var(--serif); font-weight: 400; font-size: 19px; margin: 6px 0 6px; }
+  .agency p { font-size: 13px; color: rgba(255,255,255,0.65); font-weight: 300; }
 
-  .hero-dna {
-    position: absolute;
-    right: -20px;
-    top: 50%;
-    transform: translateY(-50%);
-    opacity: 0.07;
-    width: 500px;
-    height: 500px;
-  }
+  /* PROCESS STRIP */
+  .process-title { display: flex; justify-content: space-between; align-items: end; gap: 20px; flex-wrap: wrap; margin: 64px 0 18px; }
+  .process-title h3 { font-family: var(--sans); font-weight: 600; font-size: 22px; color: var(--navy); }
+  .tabs { display: flex; gap: 6px; background: rgba(11,30,61,0.06); padding: 4px; border-radius: 8px; }
+  .tab { background: none; border: 0; font: 500 12.5px var(--sans); color: var(--text-3); padding: 8px 14px; border-radius: 6px; cursor: pointer; }
+  .tab.on { background: var(--white); color: var(--navy); box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+  .strip { display: grid; grid-template-columns: repeat(6, 1fr); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: var(--white); list-style: none; }
+  .pillar.alt .strip { background: var(--cream); }
+  .strip.hide { display: none; }
+  .strip li { padding: 22px 18px 20px; border-right: 1px solid var(--line); display: flex; flex-direction: column; }
+  .strip li:last-child { border-right: 0; background: rgba(11,30,61,0.05); }
+  .strip .sn { font-family: var(--mono); font-size: 11px; color: var(--gold-dark); }
+  .strip b { font-size: 15px; font-weight: 600; color: var(--navy); margin: 10px 0 6px; line-height: 1.3; }
+  .strip p { font-size: 12.5px; color: var(--text-2); font-weight: 300; line-height: 1.5; flex: 1; }
+  .strip .pill { align-self: flex-start; margin-top: 14px; font-family: var(--mono); font-size: 11px; color: var(--navy); border: 1px solid var(--line); background: var(--white); border-radius: 20px; padding: 3px 10px; white-space: nowrap; }
 
-  .hero-content {
-    position: relative;
-    z-index: 2;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 60px;
-    padding-top: 72px;
-  }
+  /* WHY */
+  .why { background: var(--navy-deep); }
+  .why-layout { display: grid; grid-template-columns: 1fr 1.1fr; gap: 80px; align-items: center; }
+  .why h2.title { color: var(--white); }
+  .why-list { list-style: none; }
+  .why-list li { display: flex; gap: 22px; padding: 24px 0; border-bottom: 1px solid rgba(192,155,91,0.15); }
+  .why-list li:first-child { border-top: 1px solid rgba(192,155,91,0.15); }
+  .why-icon { flex-shrink: 0; width: 44px; height: 44px; border: 1px solid rgba(192,155,91,0.4); border-radius: 3px; display: grid; place-items: center; }
+  .why-icon svg { width: 20px; height: 20px; stroke: var(--gold); fill: none; stroke-width: 1.5; }
+  .why-list h3 { font-family: var(--serif); font-weight: 500; font-size: 18px; color: var(--white); margin-bottom: 4px; }
+  .why-list p { font-size: 13.5px; color: rgba(255,255,255,0.62); font-weight: 300; }
 
-  .hero-eyebrow {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    margin-bottom: 32px;
-    animation: fadeUp 0.8s ease forwards;
-    opacity: 0;
-    animation-delay: 0.3s;
-  }
-  .hero-eyebrow-line {
-    width: 48px;
-    height: 1px;
-    background: var(--gold);
-  }
-  .hero-eyebrow-text {
-    font-size: 11px;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--gold);
-    font-weight: 400;
-  }
+  /* ABOUT */
+  .about { background: var(--white); }
+  .about-layout { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 80px; align-items: center; }
+  .about-visual { aspect-ratio: 4/5; background: repeating-linear-gradient(-45deg, rgba(192,155,91,0.05) 0 1px, transparent 1px 20px), linear-gradient(180deg, var(--navy-mid), var(--navy-deep)); border-radius: 12px; display: grid; place-items: center; position: relative; }
+  .about-visual svg { width: 46%; opacity: 0.5; }
+  .about-badge { position: absolute; right: -20px; bottom: -20px; background: var(--gold); color: var(--navy-deep); padding: 20px 24px; text-align: center; box-shadow: 0 20px 60px rgba(0,0,0,0.15); border-radius: 4px; }
+  .about-badge b { display: block; font-family: var(--serif); font-weight: 400; font-size: 21px; line-height: 1.1; }
+  .about-badge span { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 500; }
+  .about p { color: var(--text-2); font-weight: 300; margin-top: 16px; }
+  .mission { margin: 30px 0; font-family: var(--serif-2); font-style: italic; font-weight: 300; font-size: 21px; line-height: 1.6; color: var(--navy); border-left: 3px solid var(--gold); padding-left: 22px; }
 
-  .hero-h1 {
-    font-family: var(--font-serif);
-    font-size: clamp(42px, 6vw, 72px);
-    font-weight: 400;
-    color: var(--white);
-    line-height: 1.1;
-    letter-spacing: -0.01em;
-    margin-bottom: 28px;
-    animation: fadeUp 0.8s ease forwards;
-    opacity: 0;
-    animation-delay: 0.5s;
-    max-width: 740px;
-  }
+  /* CONTACT */
+  .contact { background: var(--navy-deep); }
+  .contact h2.title { color: var(--white); }
+  .contact-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; }
+  .info-row { display: flex; gap: 20px; align-items: center; padding: 17px 0; border-bottom: 1px solid rgba(192,155,91,0.15); }
+  .info-row:first-of-type { border-top: 1px solid rgba(192,155,91,0.15); margin-top: 36px; }
+  .info-row span { font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); min-width: 70px; }
+  .info-row a, .info-row p { font-size: 14px; color: rgba(255,255,255,0.8); font-weight: 300; text-decoration: none; }
+  .info-row a:hover { color: var(--gold-light); }
+  form { display: flex; flex-direction: column; gap: 15px; }
+  .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  label { display: flex; flex-direction: column; gap: 6px; font-size: 10.5px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.55); }
+  input, select, textarea { background: rgba(255,255,255,0.05); border: 1px solid rgba(192,155,91,0.25); border-radius: 4px; padding: 12px 15px; color: var(--white); font: 300 14px var(--sans); outline: none; transition: border-color var(--ease); width: 100%; }
+  select option { background: var(--navy-deep); }
+  input::placeholder, textarea::placeholder { color: rgba(255,255,255,0.28); }
+  input:focus, select:focus, textarea:focus { border-color: rgba(192,155,91,0.75); }
+  textarea { min-height: 120px; resize: vertical; }
+  .form-note { font-size: 12px; color: rgba(255,255,255,0.45); font-weight: 300; }
 
-  .hero-h1 em {
-    font-style: italic;
-    color: var(--gold-light);
-    font-family: var(--font-serif-2);
-    font-weight: 300;
-    font-size: 1.05em;
-  }
+  footer { background: var(--navy-deep); border-top: 1px solid rgba(192,155,91,0.12); padding: 28px 0; }
+  .foot { display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; font-size: 12px; color: rgba(255,255,255,0.45); }
+  .foot .logo-mark { width: 28px; height: 28px; font-size: 11px; }
+  .foot-brand { display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,0.6); font-size: 13px; }
 
-  .hero-p {
-    font-size: 17px;
-    line-height: 1.8;
-    color: rgba(255,255,255,0.55);
-    max-width: 520px;
-    margin-bottom: 48px;
-    font-weight: 300;
-    animation: fadeUp 0.8s ease forwards;
-    opacity: 0;
-    animation-delay: 0.7s;
-  }
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+  .reveal.visible { opacity: 1; transform: none; }
 
-  .hero-actions {
-    display: flex;
-    align-items: center;
-    gap: 24px;
-    animation: fadeUp 0.8s ease forwards;
-    opacity: 0;
-    animation-delay: 0.9s;
+  @media (max-width: 1040px) {
+    .cards { grid-template-columns: 1fr 1fr; }
+    .strip { grid-template-columns: repeat(3, 1fr); }
+    .strip li:nth-child(3) { border-right: 0; }
+    .strip li:nth-child(-n+3) { border-bottom: 1px solid var(--line); }
+    .agencies { grid-template-columns: 1fr; }
+    .why-layout, .about-layout, .contact-layout { grid-template-columns: 1fr; gap: 56px; }
+    .about-visual { max-width: 420px; aspect-ratio: 4/3; }
   }
-
-  .btn-primary {
-    font-size: 12px;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    font-weight: 500;
-    background: var(--gold);
-    color: var(--navy-deep);
-    border: none;
-    padding: 16px 36px;
-    cursor: pointer;
-    border-radius: 2px;
-    transition: all var(--transition);
-    font-family: var(--font-sans);
+  @media (max-width: 760px) {
+    .container { padding: 0 20px; }
+    section { padding: 76px 0; }
+    .menu-btn { display: block; }
+    .nav-links { position: absolute; top: 72px; left: 0; right: 0; flex-direction: column; gap: 0; background: var(--navy-deep); border-bottom: 1px solid rgba(192,155,91,0.15); max-height: 0; overflow: hidden; transition: max-height var(--ease); }
+    .nav-links.open { max-height: 420px; }
+    .nav-links li { width: 100%; }
+    .nav-links a { display: block; padding: 16px 20px; border-top: 1px solid rgba(192,155,91,0.08); }
+    .nav-links .nav-cta { border: 0; border-top: 1px solid rgba(192,155,91,0.08); border-radius: 0; padding: 16px 20px; }
+    .hero { padding: 120px 0 70px; }
+    .pillar-cards, .cards, .cards.two, .row2 { grid-template-columns: 1fr; }
+    .pcard { padding: 26px 22px; }
+    .pillar-head { grid-template-columns: 1fr; }
+    .strip { grid-template-columns: 1fr; }
+    .strip li { border-right: 0; border-bottom: 1px solid var(--line); }
+    .strip li:last-child { border-bottom: 0; }
+    .about-badge { right: 12px; bottom: -18px; }
   }
-  .btn-primary:hover {
-    background: var(--gold-light);
-    transform: translateY(-2px);
-    box-shadow: 0 12px 40px rgba(192,155,91,0.3);
-  }
-
-  .btn-ghost {
-    font-size: 12px;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    font-weight: 400;
-    background: transparent;
-    color: rgba(255,255,255,0.65);
-    border: none;
-    padding: 16px 0;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    transition: all var(--transition);
-    font-family: var(--font-sans);
-  }
-  .btn-ghost-arrow {
-    width: 28px;
-    height: 1px;
-    background: rgba(255,255,255,0.3);
-    position: relative;
-    transition: width var(--transition);
-  }
-  .btn-ghost-arrow::after {
-    content: '';
-    position: absolute;
-    right: 0; top: -3px;
-    border-right: 5px solid rgba(255,255,255,0.3);
-    border-top: 3px solid transparent;
-    border-bottom: 3px solid transparent;
-  }
-  .btn-ghost:hover { color: var(--white); }
-  .btn-ghost:hover .btn-ghost-arrow { width: 44px; background: var(--gold); }
-  .btn-ghost:hover .btn-ghost-arrow::after { border-right-color: var(--gold); }
-
-  .hero-stats {
-    position: absolute;
-    bottom: 60px;
-    right: 60px;
-    display: flex;
-    gap: 48px;
-    z-index: 2;
-    animation: fadeUp 0.8s ease forwards;
-    opacity: 0;
-    animation-delay: 1.1s;
-  }
-
-  .stat { text-align: center; }
-  .stat-num {
-    font-family: var(--font-serif);
-    font-size: 36px;
-    font-weight: 400;
-    color: var(--white);
-    line-height: 1;
-    margin-bottom: 6px;
-  }
-  .stat-num span { color: var(--gold); font-style: italic; font-family: var(--font-serif-2); }
-  .stat-label {
-    font-size: 10px;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: rgba(255,255,255,0.35);
-  }
-  .stat-divider {
-    width: 1px;
-    height: 50px;
-    background: rgba(192,155,91,0.2);
-    align-self: center;
-  }
-
-  /* ─── SECTION COMMONS ─── */
-  section { padding: 100px 0; }
-  .container { max-width: 1100px; margin: 0 auto; padding: 0 60px; }
-
-  .section-eyebrow { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; }
-  .eyebrow-line { width: 32px; height: 1px; background: var(--gold); }
-  .eyebrow-text {
-    font-size: 10.5px;
-    letter-spacing: 0.22em;
-    text-transform: uppercase;
-    color: var(--gold);
-    font-weight: 400;
-  }
-
-  .section-h2 {
-    font-family: var(--font-serif);
-    font-size: clamp(30px, 4vw, 46px);
-    font-weight: 400;
-    color: var(--text-primary);
-    line-height: 1.2;
-    letter-spacing: -0.01em;
-  }
-  .section-h2 em {
-    font-style: italic;
-    color: var(--gold);
-    font-family: var(--font-serif-2);
-    font-weight: 300;
-  }
-
-  /* ─── SERVICES ─── */
-  .services { background: var(--white); }
-
-  .services-header {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 40px;
-    margin-bottom: 70px;
-  }
-  .services-header-left { flex: 0 0 auto; max-width: 440px; }
-  .services-header-right {
-    flex: 1;
-    padding-top: 12px;
-    max-width: 380px;
-    font-size: 15px;
-    color: var(--text-secondary);
-    line-height: 1.8;
-    font-weight: 300;
-    border-left: 1px solid var(--border-subtle);
-    padding-left: 40px;
-  }
-
-  .services-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1px;
-    background: var(--border-subtle);
-    border: 1px solid var(--border-subtle);
-  }
-
-  .service-card {
-    background: var(--white);
-    padding: 44px 40px;
-    transition: all var(--transition);
-    position: relative;
-    overflow: hidden;
-    cursor: default;
-  }
-  .service-card::before {
-    content: '';
-    position: absolute;
-    bottom: 0; left: 0; right: 0;
-    height: 2px;
-    background: var(--gold);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform var(--transition);
-  }
-  .service-card:hover { background: var(--cream); }
-  .service-card:hover::before { transform: scaleX(1); }
-
-  .service-num {
-    font-family: var(--font-serif-2);
-    font-size: 48px;
-    font-weight: 300;
-    color: rgba(192,155,91,0.18);
-    line-height: 1;
-    margin-bottom: 24px;
-    display: block;
-    font-style: italic;
-  }
-  .service-title {
-    font-family: var(--font-serif);
-    font-size: 20px;
-    font-weight: 500;
-    color: var(--navy);
-    margin-bottom: 14px;
-    line-height: 1.3;
-  }
-  .service-desc { font-size: 14px; color: var(--text-secondary); line-height: 1.8; font-weight: 300; }
-  .service-arrow {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    margin-top: 24px;
-    font-size: 11px;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    color: var(--gold);
-    font-weight: 500;
-    opacity: 0;
-    transition: opacity var(--transition);
-  }
-  .service-card:hover .service-arrow { opacity: 1; }
-
-  /* ─── WHY CHOOSE ─── */
-  .why { background: var(--navy); position: relative; overflow: hidden; }
-  .why::before {
-    content: '';
-    position: absolute;
-    top: -200px; right: -200px;
-    width: 600px; height: 600px;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(192,155,91,0.06) 0%, transparent 70%);
-  }
-
-  .why-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
-  .why-left .section-h2 { color: var(--white); margin-bottom: 24px; margin-top: 20px; }
-  .why-left p { color: rgba(255,255,255,0.5); line-height: 1.85; font-weight: 300; font-size: 15px; margin-bottom: 40px; }
-
-  .why-tag {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 11px;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: var(--gold-light);
-    background: rgba(192,155,91,0.1);
-    border: 1px solid rgba(192,155,91,0.2);
-    padding: 8px 16px;
-    border-radius: 2px;
-  }
-
-  .why-pillars { display: flex; flex-direction: column; gap: 0; }
-  .pillar {
-    display: flex;
-    gap: 28px;
-    padding: 32px 0;
-    border-bottom: 1px solid rgba(192,155,91,0.12);
-    transition: all var(--transition);
-  }
-  .pillar:first-child { border-top: 1px solid rgba(192,155,91,0.12); }
-  .pillar:hover { padding-left: 12px; }
-
-  .pillar-icon {
-    flex-shrink: 0;
-    width: 44px;
-    height: 44px;
-    border: 1px solid rgba(192,155,91,0.3);
-    border-radius: 3px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all var(--transition);
-  }
-  .pillar:hover .pillar-icon { background: var(--gold); border-color: var(--gold); }
-  .pillar-icon svg { width: 20px; height: 20px; stroke: var(--gold); fill: none; stroke-width: 1.5; transition: stroke var(--transition); }
-  .pillar:hover .pillar-icon svg { stroke: var(--navy-deep); }
-
-  .pillar-content h3 { font-family: var(--font-serif); font-size: 18px; font-weight: 500; color: var(--white); margin-bottom: 8px; }
-  .pillar-content p { font-size: 13.5px; color: rgba(255,255,255,0.45); line-height: 1.75; font-weight: 300; }
-
-  /* ─── ABOUT ─── */
-  .about { background: var(--cream); }
-  .about-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 90px; align-items: start; }
-  .about-img-wrap { position: relative; }
-  .about-img-frame { width: 100%; aspect-ratio: 4/5; background: var(--navy-mid); border-radius: 2px; overflow: hidden; position: relative; }
-  .about-img-frame::after { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(192,155,91,0.15), transparent 60%); }
-  .about-img-inner {
-    width: 100%; height: 100%;
-    background:
-      repeating-linear-gradient(-45deg, rgba(192,155,91,0.03) 0px, rgba(192,155,91,0.03) 1px, transparent 1px, transparent 20px),
-      linear-gradient(180deg, var(--navy-mid) 0%, var(--navy-deep) 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .about-dna-svg { opacity: 0.25; width: 200px; }
-
-  .about-badge {
-    position: absolute;
-    bottom: -24px; right: -24px;
-    background: var(--gold);
-    color: var(--navy-deep);
-    padding: 24px 28px;
-    border-radius: 2px;
-    text-align: center;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.15);
-  }
-  .about-badge-num { font-family: var(--font-serif); font-size: 32px; font-weight: 400; line-height: 1; margin-bottom: 4px; }
-  .about-badge-text { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 500; }
-
-  .about-content { padding-top: 16px; }
-  .about-content .section-h2 { margin: 16px 0 24px; }
-  .about-content p { font-size: 15px; color: var(--text-secondary); line-height: 1.85; font-weight: 300; margin-bottom: 20px; }
-  .about-divider { width: 48px; height: 1px; background: var(--gold); margin: 32px 0; }
-  .about-mission {
-    font-family: var(--font-serif-2);
-    font-size: 20px;
-    font-weight: 300;
-    font-style: italic;
-    color: var(--navy);
-    line-height: 1.7;
-    border-left: 3px solid var(--gold);
-    padding-left: 24px;
-    margin-bottom: 36px;
-  }
-
-  /* ─── CONTACT ─── */
-  .contact { background: var(--navy-deep); padding: 90px 0; }
-  .contact-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
-  .contact-left .section-h2 { color: var(--white); margin: 16px 0 24px; }
-  .contact-left p { color: rgba(255,255,255,0.45); line-height: 1.85; font-weight: 300; margin-bottom: 40px; }
-
-  .contact-info-row { display: flex; align-items: center; gap: 20px; padding: 20px 0; border-bottom: 1px solid rgba(192,155,91,0.1); }
-  .contact-info-row:first-of-type { border-top: 1px solid rgba(192,155,91,0.1); }
-  .contact-info-label { font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); min-width: 64px; font-weight: 400; }
-  .contact-info-value { font-size: 14px; color: rgba(255,255,255,0.7); font-weight: 300; }
-
-  .contact-form { display: flex; flex-direction: column; gap: 16px; }
-  .form-group { display: flex; flex-direction: column; gap: 6px; }
-  .form-label { font-size: 10.5px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.35); font-weight: 400; }
-  .form-input {
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(192,155,91,0.15);
-    border-radius: 2px;
-    padding: 13px 18px;
-    color: var(--white);
-    font-size: 14px;
-    font-family: var(--font-sans);
-    font-weight: 300;
-    transition: border-color var(--transition);
-    outline: none;
-  }
-  .form-input::placeholder { color: rgba(255,255,255,0.18); }
-  .form-input:focus { border-color: rgba(192,155,91,0.5); }
-  textarea.form-input { min-height: 110px; resize: vertical; }
-  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-  .form-submit { margin-top: 8px; }
-  .form-submit .btn-primary { width: 100%; padding: 15px; font-size: 11px; letter-spacing: 0.18em; }
-
-  /* ─── FOOTER ─── */
-  footer {
-    background: var(--navy-deep);
-    border-top: 1px solid rgba(192,155,91,0.1);
-    padding: 32px 60px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .footer-brand { display: flex; align-items: center; gap: 10px; }
-  .footer-logo-mark {
-    width: 28px; height: 28px;
-    background: var(--gold);
-    border-radius: 2px;
-    display: flex; align-items: center; justify-content: center;
-    font-family: Arial, sans-serif; font-size: 11px; font-weight: 700; color: var(--navy-deep);
-  }
-  .footer-brand-text { font-size: 13px; color: rgba(255,255,255,0.4); font-weight: 300; }
-  .footer-copy { font-size: 12px; color: rgba(255,255,255,0.2); letter-spacing: 0.04em; }
-  .footer-links { display: flex; gap: 24px; list-style: none; }
-  .footer-links a { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.25); text-decoration: none; transition: color var(--transition); }
-  .footer-links a:hover { color: var(--gold); }
-
-  /* ─── ANIMATIONS ─── */
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(24px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  .reveal { opacity: 0; transform: translateY(32px); transition: opacity 0.7s ease, transform 0.7s ease; }
-  .reveal.visible { opacity: 1; transform: translateY(0); }
-
-  ::-webkit-scrollbar { width: 4px; }
-  ::-webkit-scrollbar-track { background: var(--navy-deep); }
-  ::-webkit-scrollbar-thumb { background: rgba(192,155,91,0.3); border-radius: 2px; }
 </style>
 </head>
 <body>
 
-<!-- NAV -->
-<nav>
-  <a href="#" class="nav-logo">
-    <div class="nav-logo-mark">EI</div>
-    <div class="nav-logo-text">
-      <span class="name">Epigenix Innovation</span>
-      <span class="sub">Global Co., Ltd.</span>
-    </div>
-  </a>
-  <ul class="nav-links">
-    <li><a href="#services">Services</a></li>
-    <li><a href="#why">Why Us</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#contact" class="nav-cta">Contact</a></li>
-  </ul>
+<nav class="top">
+  <div class="container nav-inner">
+    <a href="#top" class="logo" aria-label="Epigenix Innovation home">
+      <div class="logo-mark">EI</div>
+      <div class="logo-text"><b>Epigenix Innovation</b><small>Global Co., Ltd.</small></div>
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#human">I · Human health</a></li>
+      <li><a href="#animal">II · Animal health</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact" class="nav-cta">Request a quote</a></li>
+    </ul>
+  </div>
 </nav>
 
 <!-- HERO -->
-<section class="hero">
-  <div class="hero-bg-grid"></div>
-  <div class="hero-accent-line"></div>
-
-  <svg class="hero-dna" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <ellipse cx="200" cy="200" rx="140" ry="80" stroke="#C09B5B" stroke-width="1" fill="none" opacity="0.6"/>
-    <ellipse cx="200" cy="200" rx="100" ry="56" stroke="#C09B5B" stroke-width="0.5" fill="none" opacity="0.4"/>
-    <ellipse cx="200" cy="200" rx="60" ry="34" stroke="#C09B5B" stroke-width="0.5" fill="none" opacity="0.3"/>
-    <line x1="60" y1="200" x2="340" y2="200" stroke="#C09B5B" stroke-width="0.5" opacity="0.3"/>
-    <line x1="200" y1="60" x2="200" y2="340" stroke="#C09B5B" stroke-width="0.5" opacity="0.3"/>
-    <circle cx="200" cy="200" r="8" fill="#C09B5B" opacity="0.4"/>
-    <circle cx="340" cy="200" r="4" fill="#C09B5B" opacity="0.3"/>
-    <circle cx="60" cy="200" r="4" fill="#C09B5B" opacity="0.3"/>
-    <circle cx="200" cy="120" r="3" fill="#C09B5B" opacity="0.25"/>
-    <circle cx="200" cy="280" r="3" fill="#C09B5B" opacity="0.25"/>
-  </svg>
-
-  <div class="hero-content">
-    <div class="hero-eyebrow">
-      <div class="hero-eyebrow-line"></div>
-      <span class="hero-eyebrow-text">US FDA Registration &amp; Regulatory Strategy</span>
-    </div>
-    <h1 class="hero-h1">
-      Pioneering <em>Pet Pharmaceuticals</em><br>through Cutting&#8209;Edge Genetics
-    </h1>
-    <p class="hero-p">
-      Where innovation meets compassion — harnessing the power of genetics to redefine the standards of animal healthcare through precision medicine and epigenomics.
-    </p>
-    <div class="hero-actions">
-      <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Inquire Now</button>
-      <button class="btn-ghost" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">
-        <span class="btn-ghost-arrow"></span>
-        Our Services
-      </button>
+<header class="hero" id="top">
+  <div class="hero-grid"></div>
+  <div class="container">
+    <div class="eyebrow fade d1"><span>Bio-efficacy CRO · Two pillars</span></div>
+    <h1 class="fade d2">Efficacy evidence that holds up, for <em>humans</em> and for <em>animals</em></h1>
+    <p class="sub fade d3">Contract research from efficacy and toxicity to clinical trials and regulatory submission. One team owns every study from design to the final report, for human health products and for animal drugs and diagnostics alike.</p>
+    <div class="pillar-cards fade d4">
+      <a class="pcard" href="#human">
+        <span class="num">Pillar I</span>
+        <h3>Human health</h3>
+        <p>Natural products, dietary-supplement and functional-food ingredients and drug candidates, taken from cell and animal efficacy through GLP toxicity to human intervention trials.</p>
+        <div class="chips"><span>Non-GLP</span><span>OECD GLP</span><span>ICH GCP</span><span>FDA · EFSA</span></div>
+        <span class="go">Explore human health →</span>
+      </a>
+      <a class="pcard" href="#animal">
+        <span class="num">Pillar II</span>
+        <h3>Animal health</h3>
+        <p>Veterinary drugs and diagnostic kits, taken from efficacy and target animal safety through field trials and kit validation to registration.</p>
+        <div class="chips"><span>Non-GLP</span><span>GLP</span><span>VICH GCP</span><span>FDA CVM</span><span>USDA CVB</span><span>EMA</span></div>
+        <span class="go">Explore animal health →</span>
+      </a>
     </div>
   </div>
+</header>
 
-  <div class="hero-stats">
-    <div class="stat">
-      <div class="stat-num">510<span>K</span></div>
-      <div class="stat-label">FDA Registration</div>
+<!-- PILLAR I : HUMAN -->
+<section class="pillar" id="human">
+  <div class="container">
+    <div class="pillar-head reveal">
+      <div>
+        <div class="pillar-no"><b>I</b>Pillar I · Human health</div>
+        <h2 class="title">Contract research from efficacy and toxicity to <em>human trials</em></h2>
+        <p class="lead">We take natural products, dietary-supplement and functional-food ingredients and drug candidates through the full efficacy-evidence path. One team owns everything from study design to a submission-ready final report for regulators worldwide.</p>
+      </div>
+      <a href="#contact" class="text-link" data-pillar="Human health">Request a quote →</a>
     </div>
-    <div class="stat-divider"></div>
-    <div class="stat">
-      <div class="stat-num"><span>US</span> FDA</div>
-      <div class="stat-label">Compliance</div>
+
+    <div class="cards reveal">
+      <div class="card">
+        <div class="card-head">
+          <span class="ctag">A · Non-GLP</span>
+          <h3>Preclinical efficacy</h3>
+          <p>Efficacy and mechanism in cell and disease animal models, including marker-compound selection and dose-response.</p>
+        </div>
+        <div class="item"><span class="n">In vitro screening &amp; MoA</span><span class="p">USD 4K – 8K</span><span class="s">Cell lines, gene &amp; protein expression</span><span class="t">4–8 wk</span></div>
+        <div class="item"><span class="n">In vivo efficacy</span><span class="p">USD 8K – 22K</span><span class="s">Disease model, blood &amp; histopathology</span><span class="t">2–4 mo</span></div>
+        <div class="item"><span class="n">Behavior &amp; cognition package</span><span class="p">USD 15K – 25K</span><span class="s">Water maze, Y-maze, etc.</span><span class="t">3–4 mo</span></div>
+      </div>
+      <div class="card">
+        <div class="card-head">
+          <span class="ctag">B · GLP</span>
+          <h3>Toxicity evaluation</h3>
+          <p>Safety packages for dietary-ingredient notification, novel-food or health-claim approval, or IND, run with OECD GLP-compliant partners. We own the design and the interpretation.</p>
+        </div>
+        <div class="item"><span class="n">Single-dose toxicity</span><span class="p">USD 4K – 8K</span><span class="s">Rat, 14-day observation</span><span class="t">1–2 mo</span></div>
+        <div class="item"><span class="n">Repeat-dose range-finding (4 wk)</span><span class="p">USD 15K – 30K</span><span class="s">Sets doses for the main study</span><span class="t">2–3 mo</span></div>
+        <div class="item"><span class="n">90-day repeat-dose toxicity</span><span class="p">USD 75K – 150K</span><span class="s">Rat, with recovery groups</span><span class="t">6–8 mo</span></div>
+        <div class="item"><span class="n">Genotoxicity battery</span><span class="p">USD 22K – 37K</span><span class="s">Ames · chromosomal aberration · micronucleus</span><span class="t">2–3 mo</span></div>
+      </div>
+      <div class="card">
+        <div class="card-head">
+          <span class="ctag">C · GCP</span>
+          <h3>Human intervention &amp; clinical trials</h3>
+          <p>Randomized, double-blind, placebo-controlled trials that prove functional claims, run to ICH GCP with university-hospital investigators.</p>
+        </div>
+        <div class="item"><span class="n">Pilot study</span><span class="p">USD 75K – 150K</span><span class="s">≈40 subjects · 8 wk</span><span class="t">8–10 mo</span></div>
+        <div class="item"><span class="n">Confirmatory trial</span><span class="p">USD 150K – 370K</span><span class="s">80–120 subjects · 12 wk · multi-site</span><span class="t">12–18 mo</span></div>
+        <div class="item"><span class="n">Single modules</span><span class="p">Quoted</span><span class="s">Protocol, IRB, eCRF, stats, report</span><span class="t"></span></div>
+      </div>
     </div>
-    <div class="stat-divider"></div>
-    <div class="stat">
-      <div class="stat-num">Pet<span>Rx</span></div>
-      <div class="stat-label">Pharmaceuticals</div>
-    </div>
+    <p class="fine reveal">Prices in USD, excluding taxes. They vary with test article, species and group size, subject numbers and endpoints; formal quotes follow a consultation. Drug clinical trials (Phase 1 and beyond) are quoted separately.</p>
+
+    <div class="process-title reveal"><h3>How we run a human trial</h3></div>
+    <ol class="strip reveal">
+      <li><span class="sn">01</span><b>Design &amp; protocol</b><p>Endpoints and sample size per ICH E9 and target-agency guidance</p><span class="pill">4–6 wk</span></li>
+      <li><span class="sn">02</span><b>IRB approval &amp; registry</b><p>Ethics review and ClinicalTrials.gov or national registry</p><span class="pill">4–8 wk</span></li>
+      <li><span class="sn">03</span><b>eCRF &amp; data management</b><p>Electronic CRF build and data-validation plan</p><span class="pill">3–4 wk</span></li>
+      <li><span class="sn">04</span><b>Conduct &amp; monitoring</b><p>Recruitment, randomization, intake, visits, GCP monitoring</p><span class="pill">4–8 mo</span></li>
+      <li><span class="sn">05</span><b>Statistics &amp; final report</b><p>Analysis to the SAP and a submission-ready final report</p><span class="pill">2–3 mo</span></li>
+      <li><span class="sn">06</span><b>Regulatory dossier support</b><p>Ingredient notification, health-claim or approval dossier and agency responses</p><span class="pill">Agency review</span></li>
+    </ol>
   </div>
 </section>
 
-<!-- SERVICES -->
-<section class="services" id="services">
+<!-- PILLAR II : ANIMAL -->
+<section class="pillar alt" id="animal">
   <div class="container">
-    <div class="services-header">
-      <div class="services-header-left">
-        <div class="section-eyebrow reveal">
-          <div class="eyebrow-line"></div>
-          <span class="eyebrow-text">What We Offer</span>
-        </div>
-        <h2 class="section-h2 reveal" style="margin-top:16px;">Our <em>Regulatory</em><br>Services</h2>
+    <div class="pillar-head reveal">
+      <div>
+        <div class="pillar-no"><b>II</b>Pillar II · Animal health</div>
+        <h2 class="title">Contract research from efficacy and safety to <em>registration</em></h2>
+        <p class="lead">We take veterinary drug candidates and animal diagnostic kits through efficacy, target animal safety, field trials and kit validation, then write the dossier for FDA, USDA, EMA and other agencies worldwide. One team owns everything from study design to approval.</p>
       </div>
-      <div class="services-header-right reveal">
-        We provide end-to-end FDA regulatory consulting — from initial compliance assessment through approval strategy and ongoing quality assurance — tailored to the unique demands of veterinary and diagnostic products.
+      <a href="#contact" class="text-link" data-pillar="Animal health">Request a quote →</a>
+    </div>
+
+    <div class="agencies reveal">
+      <div class="agency"><span class="ab">US · FDA CVM</span><b>Animal drugs</b><p>Investigational file (INAD), technical sections and NADA or conditional approval.</p></div>
+      <div class="agency"><span class="ab">US · USDA APHIS CVB</span><b>Biologics &amp; diagnostic kits</b><p>Vaccines and disease diagnostic kits: product license or import permit.</p></div>
+      <div class="agency"><span class="ab">EU · EMA &amp; global</span><b>Other markets</b><p>EU marketing authorisation and national registrations in Asia and other regions.</p></div>
+    </div>
+
+    <div class="cards reveal">
+      <div class="card">
+        <div class="card-head">
+          <span class="ctag">A · Non-GLP</span>
+          <h3>Preclinical efficacy</h3>
+          <p>Efficacy and mechanism in target-species cells and disease models, with pilot pharmacokinetics to select the dose for pivotal studies.</p>
+        </div>
+        <div class="item"><span class="n">In vitro screening &amp; MoA</span><span class="p">USD 5K – 10K</span><span class="s">Canine &amp; feline cell lines, gene &amp; protein expression</span><span class="t">4–8 wk</span></div>
+        <div class="item"><span class="n">In vivo disease-model efficacy</span><span class="p">USD 20K – 60K</span><span class="s">Rodent or target-species model, blood &amp; histopathology</span><span class="t">2–4 mo</span></div>
+        <div class="item"><span class="n">Pilot pharmacokinetics</span><span class="p">USD 25K – 60K</span><span class="s">Target species, exposure &amp; half-life</span><span class="t">2–3 mo</span></div>
+        <div class="item"><span class="n">Dose determination study</span><span class="p">USD 40K – 90K</span><span class="s">Target species, multiple dose groups</span><span class="t">3–4 mo</span></div>
+      </div>
+      <div class="card">
+        <div class="card-head">
+          <span class="ctag">B · GLP</span>
+          <h3>Safety &amp; target animal safety</h3>
+          <p>Safety packages for an investigational file or approval, run with GLP-certified partners. The target animal safety study is the core safety evidence for a veterinary drug.</p>
+        </div>
+        <div class="item"><span class="n">Single-dose toxicity</span><span class="p">USD 4K – 8K</span><span class="s">Rat, 14-day observation</span><span class="t">1–2 mo</span></div>
+        <div class="item"><span class="n">Repeat-dose range-finding (4 wk)</span><span class="p">USD 15K – 30K</span><span class="s">Sets doses for the main study</span><span class="t">2–3 mo</span></div>
+        <div class="item"><span class="n">Genotoxicity battery</span><span class="p">USD 22K – 37K</span><span class="s">Ames · chromosomal aberration · micronucleus</span><span class="t">2–3 mo</span></div>
+        <div class="item"><span class="n">Target animal safety (TAS)</span><span class="p">USD 250K – 600K</span><span class="s">Dog or cat, 0X / 1X / 3X / 5X, per VICH GL43</span><span class="t">9–12 mo</span></div>
+      </div>
+      <div class="card">
+        <div class="card-head">
+          <span class="ctag">C · VICH GCP</span>
+          <h3>Target-animal field trials</h3>
+          <p>Randomized, masked, controlled studies in client-owned animals that prove effectiveness under real-world use, run to VICH GL9 with veterinary-clinic investigators.</p>
+        </div>
+        <div class="item"><span class="n">Pilot field study</span><span class="p">USD 80K – 200K</span><span class="s">≈20–40 animals · 1–3 clinics</span><span class="t">6–9 mo</span></div>
+        <div class="item"><span class="n">Pivotal field effectiveness study</span><span class="p">USD 400K – 1.2M</span><span class="s">≈100–200 animals · multi-site · masked</span><span class="t">12–24 mo</span></div>
+        <div class="item"><span class="n">Single modules</span><span class="p">Quoted</span><span class="s">Protocol, owner consent, eCRF, monitoring, stats, report</span><span class="t"></span></div>
       </div>
     </div>
 
-    <div class="services-grid reveal">
-      <div class="service-card">
-        <span class="service-num">01</span>
-        <div class="service-title">FDA Approval Consultation</div>
-        <p class="service-desc">Comprehensive consultation and support for FDA compliance. We verify that your products meet all applicable regulations and develop customized strategies for a smooth compliance path.</p>
-        <div class="service-arrow">Learn More →</div>
+    <div class="cards two reveal">
+      <div class="card">
+        <div class="card-head">
+          <span class="ctag">D · Diagnostics</span>
+          <h3>Diagnostic kit performance evaluation</h3>
+          <p>The evidence an animal-disease diagnostic kit needs for licensing: analytical performance, diagnostic sensitivity and specificity against a reference method, and lot-to-lot consistency.</p>
+        </div>
+        <div class="item"><span class="n">Analytical performance</span><span class="p">USD 20K – 50K</span><span class="s">Limit of detection, cross-reactivity, repeatability, reproducibility</span><span class="t">2–3 mo</span></div>
+        <div class="item"><span class="n">Diagnostic sensitivity &amp; specificity</span><span class="p">USD 40K – 120K</span><span class="s">Known-status field samples vs. reference method</span><span class="t">4–8 mo</span></div>
+        <div class="item"><span class="n">Independent-laboratory evaluation</span><span class="p">USD 30K – 70K</span><span class="s">Ruggedness and reproducibility across external sites</span><span class="t">3–4 mo</span></div>
+        <div class="item"><span class="n">Stability &amp; serial consistency</span><span class="p">USD 25K – 60K</span><span class="s">Accelerated and real-time stability, three production serials</span><span class="t">3 mo +</span></div>
       </div>
-      <div class="service-card">
-        <span class="service-num">02</span>
-        <div class="service-title">Approval Application Support</div>
-        <p class="service-desc">Full-service support throughout the FDA approval process, including document preparation, process management, and direct communication with the FDA on your behalf.</p>
-        <div class="service-arrow">Learn More →</div>
-      </div>
-      <div class="service-card">
-        <span class="service-num">03</span>
-        <div class="service-title">Regulatory Compliance Review</div>
-        <p class="service-desc">Rigorous review of your products and services against FDA regulatory requirements, identifying gaps and proposing corrective actions to achieve and maintain compliance.</p>
-        <div class="service-arrow">Learn More →</div>
-      </div>
-      <div class="service-card">
-        <span class="service-num">04</span>
-        <div class="service-title">Quality Assurance &amp; Audits</div>
-        <p class="service-desc">Comprehensive QA management and audit services to ensure consistent production of FDA-compliant products, protecting your market position and patient safety.</p>
-        <div class="service-arrow">Learn More →</div>
+      <div class="card">
+        <div class="card-head">
+          <span class="ctag">E · Regulatory</span>
+          <h3>Registration &amp; approval</h3>
+          <p>Pathway strategy, dossier authoring and agency communication for animal drugs, biologics and diagnostic kits in the US, EU and other markets.</p>
+        </div>
+        <div class="item"><span class="n">Pathway &amp; gap assessment</span><span class="p">USD 6.5K – 12K</span><span class="s">Agency decision, data gaps, roadmap and budget</span><span class="t">2–4 wk</span></div>
+        <div class="item"><span class="n">INAD &amp; pre-submission meeting</span><span class="p">USD 10K – 25K</span><span class="s">Investigational file, meeting package, protocol concurrence</span><span class="t">1–3 mo</span></div>
+        <div class="item"><span class="n">FDA technical section authoring</span><span class="p">USD 15K – 50K</span><span class="s">Effectiveness, safety, CMC, environmental · per section</span><span class="t">2–4 mo</span></div>
+        <div class="item"><span class="n">USDA CVB license or import permit</span><span class="p">USD 35K – 80K</span><span class="s">Outline of Production, data summaries, application</span><span class="t">To decision</span></div>
+        <div class="item"><span class="n">EU &amp; other markets</span><span class="p">Quoted</span><span class="s">EMA and national dossiers for drugs and diagnostic products</span><span class="t">To decision</span></div>
       </div>
     </div>
+    <p class="fine reveal">Prices in USD, excluding taxes. They vary with test article, species, group size, number of animals and sites, and endpoints; formal quotes follow a consultation. GLP facility, laboratory, investigator and animal costs and government fees are quoted separately.</p>
+
+    <div class="process-title reveal">
+      <h3>How we run an animal registration</h3>
+      <div class="tabs" role="tablist">
+        <button class="tab on" data-tab="drug">Animal drug</button>
+        <button class="tab" data-tab="kit">Diagnostic kit</button>
+      </div>
+    </div>
+    <ol class="strip reveal" id="drug">
+      <li><span class="sn">01</span><b>Pathway &amp; plan</b><p>Agency decision, gap analysis, study roadmap and budget</p><span class="pill">2–4 wk</span></li>
+      <li><span class="sn">02</span><b>INAD &amp; protocols</b><p>Investigational file and agency agreement on pivotal protocols</p><span class="pill">2–4 mo</span></li>
+      <li><span class="sn">03</span><b>Efficacy &amp; safety</b><p>Dose determination and GLP target animal safety</p><span class="pill">9–15 mo</span></li>
+      <li><span class="sn">04</span><b>Field effectiveness</b><p>Multi-site, masked, controlled study in client-owned animals</p><span class="pill">12–24 mo</span></li>
+      <li><span class="sn">05</span><b>Technical sections</b><p>Phased submission of effectiveness, safety, CMC and environmental sections</p><span class="pill">≈6 mo each</span></li>
+      <li><span class="sn">06</span><b>Approval &amp; launch</b><p>Labeling, FOI summary, final application and agency responses</p><span class="pill">≈2 mo review</span></li>
+    </ol>
+    <ol class="strip hide" id="kit">
+      <li><span class="sn">01</span><b>Pathway &amp; plan</b><p>Licensing route: product license or import permit</p><span class="pill">2–4 wk</span></li>
+      <li><span class="sn">02</span><b>Outline of Production</b><p>Manufacturing, testing and release specifications</p><span class="pill">1–3 mo</span></li>
+      <li><span class="sn">03</span><b>Analytical performance</b><p>Detection limit, cross-reactivity, precision</p><span class="pill">2–3 mo</span></li>
+      <li><span class="sn">04</span><b>Sensitivity &amp; specificity</b><p>Known-status field samples against a reference method</p><span class="pill">4–8 mo</span></li>
+      <li><span class="sn">05</span><b>Serials &amp; stability</b><p>Lot consistency, stability and independent-lab evaluation</p><span class="pill">3–6 mo</span></li>
+      <li><span class="sn">06</span><b>Licensing</b><p>Data summaries, labeling, agency review and confirmatory testing</p><span class="pill">To decision</span></li>
+    </ol>
   </div>
 </section>
 
-<!-- WHY CHOOSE US -->
-<section class="why" id="why">
-  <div class="container">
-    <div class="why-layout">
-      <div class="why-left reveal">
-        <div class="section-eyebrow">
-          <div class="eyebrow-line"></div>
-          <span class="eyebrow-text" style="color:rgba(192,155,91,0.8);">Why Epigenix</span>
-        </div>
-        <h2 class="section-h2">The Competitive <em>Advantage</em></h2>
-        <p>Our multidisciplinary team spans genetics, pharmacology, and veterinary medicine. We leverage state-of-the-art genomic technologies to tailor solutions to each client's unique regulatory and scientific context.</p>
-        <div class="why-tag">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-          510(K) Diagnostic Kit Registration Specialists
-        </div>
-      </div>
-
-      <div class="why-pillars reveal">
-        <div class="pillar">
-          <div class="pillar-icon">
-            <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-          </div>
-          <div class="pillar-content">
-            <h3>Deep Regulatory Expertise</h3>
-            <p>Our team has deep, practice-specific knowledge of FDA regulations — built through years of direct engagement with the agency and successful product approvals.</p>
-          </div>
-        </div>
-        <div class="pillar">
-          <div class="pillar-icon">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
-          </div>
-          <div class="pillar-content">
-            <h3>Customized Approach</h3>
-            <p>We deliver services tailored to the specific profile of each client — from novel biologics to in-vitro diagnostics — ensuring the best-fit strategy for your timeline and budget.</p>
-          </div>
-        </div>
-        <div class="pillar">
-          <div class="pillar-icon">
-            <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-          </div>
-          <div class="pillar-content">
-            <h3>Prompt Processing</h3>
-            <p>We streamline every step of the FDA approval process, enabling rapid time-to-market without compromising regulatory rigor or submission quality.</p>
-          </div>
-        </div>
-      </div>
+<!-- WHY -->
+<section class="why dark">
+  <div class="container why-layout">
+    <div class="reveal">
+      <div class="eyebrow"><span>Why Epigenix</span></div>
+      <h2 class="title">Two pillars, <em>one standard</em></h2>
+      <p class="lead">The same disciplines run through both pillars: studies designed around what regulators will ask, certified partner facilities, and one team that interprets the data and writes the report.</p>
     </div>
+    <ul class="why-list reveal">
+      <li><div class="why-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div><div><h3>Designed for the reviewer</h3><p>Endpoints, sample sizes and formats chosen for FDA, USDA, EFSA, EMA or other agency review from day one.</p></div></li>
+      <li><div class="why-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div><div><h3>Design to dossier</h3><p>The people who design your studies also interpret the data and write the submission.</p></div></li>
+      <li><div class="why-icon"><svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div><div><h3>Shared science across species</h3><p>Mechanism and efficacy know-how from one pillar strengthens study design in the other.</p></div></li>
+      <li><div class="why-icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M8 2v4M16 2v4"/></svg></div><div><h3>Published fee ranges</h3><p>Transparent ranges and fixed-scope proposals, so you know each stage's cost before it begins.</p></div></li>
+    </ul>
   </div>
 </section>
 
 <!-- ABOUT -->
 <section class="about" id="about">
-  <div class="container">
-    <div class="about-layout">
-      <div class="about-img-wrap reveal">
-        <div class="about-img-frame">
-          <div class="about-img-inner">
-            <svg class="about-dna-svg" viewBox="0 0 200 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M40 20 Q100 60 160 100 Q100 140 40 180 Q100 220 160 260" stroke="#C09B5B" stroke-width="2" fill="none"/>
-              <path d="M160 20 Q100 60 40 100 Q100 140 160 180 Q100 220 40 260" stroke="#C09B5B" stroke-width="2" fill="none"/>
-              <line x1="40" y1="100" x2="160" y2="100" stroke="#C09B5B" stroke-width="1" opacity="0.5"/>
-              <line x1="40" y1="60" x2="160" y2="60" stroke="#C09B5B" stroke-width="0.5" opacity="0.3"/>
-              <line x1="40" y1="140" x2="160" y2="140" stroke="#C09B5B" stroke-width="0.5" opacity="0.3"/>
-              <line x1="40" y1="180" x2="160" y2="180" stroke="#C09B5B" stroke-width="1" opacity="0.5"/>
-              <line x1="40" y1="220" x2="160" y2="220" stroke="#C09B5B" stroke-width="0.5" opacity="0.3"/>
-              <circle cx="100" cy="100" r="5" fill="#C09B5B"/>
-              <circle cx="100" cy="180" r="5" fill="#C09B5B"/>
-              <circle cx="40" cy="60" r="3" fill="#C09B5B" opacity="0.6"/>
-              <circle cx="160" cy="60" r="3" fill="#C09B5B" opacity="0.6"/>
-              <circle cx="40" cy="140" r="3" fill="#C09B5B" opacity="0.6"/>
-              <circle cx="160" cy="140" r="3" fill="#C09B5B" opacity="0.6"/>
-            </svg>
-          </div>
-        </div>
-        <div class="about-badge">
-          <div class="about-badge-num">FDA</div>
-          <div class="about-badge-text">Registered<br>Specialists</div>
-        </div>
-      </div>
-
-      <div class="about-content reveal">
-        <div class="section-eyebrow">
-          <div class="eyebrow-line"></div>
-          <span class="eyebrow-text">About Us</span>
-        </div>
-        <h2 class="section-h2">Trailblazers in <em>Veterinary</em> Pharmaceutical Innovation</h2>
-        <p>Epigenix Innovation Global Co., Ltd. is a trailblazer in the field of pet pharmaceutical drug development, driven by a passion for improving the lives of our beloved animal companions.</p>
-        <p>Through relentless research and groundbreaking technologies, we unlock new therapeutic possibilities and address unmet medical needs in veterinary medicine — from genomics and gene editing to precision diagnostics.</p>
-        <div class="about-divider"></div>
-        <blockquote class="about-mission">
-          "To pioneer innovative pharmaceutical solutions that enhance the health and well-being of pets worldwide — setting new benchmarks in animal healthcare."
-        </blockquote>
-        <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Work With Us</button>
-      </div>
+  <div class="container about-layout">
+    <div class="about-visual reveal">
+      <svg viewBox="0 0 200 300" fill="none" aria-hidden="true">
+        <path d="M40 20 Q100 60 160 100 Q100 140 40 180 Q100 220 160 260" stroke="#C09B5B" stroke-width="2"/>
+        <path d="M160 20 Q100 60 40 100 Q100 140 160 180 Q100 220 40 260" stroke="#C09B5B" stroke-width="2"/>
+        <g stroke="#C09B5B" opacity="0.5"><line x1="40" y1="60" x2="160" y2="60"/><line x1="40" y1="100" x2="160" y2="100"/><line x1="40" y1="140" x2="160" y2="140"/><line x1="40" y1="180" x2="160" y2="180"/><line x1="40" y1="220" x2="160" y2="220"/></g>
+        <circle cx="100" cy="100" r="5" fill="#C09B5B"/><circle cx="100" cy="180" r="5" fill="#C09B5B"/>
+      </svg>
+      <div class="about-badge"><b>Human + Animal</b><span>Bio-efficacy<br>CRO</span></div>
+    </div>
+    <div class="reveal">
+      <div class="eyebrow"><span>About us</span></div>
+      <h2 class="title">Trailblazers in <em>bio-efficacy</em> research</h2>
+      <p>Epigenix Innovation Global Co., Ltd. is a contract research organization built on genetics and epigenomics, serving two fields: human health products and animal health products.</p>
+      <p>Our work spans cell and animal efficacy, GLP safety, human and target-animal clinical studies, diagnostic kit validation, and the regulatory dossiers that turn research into approved products.</p>
+      <blockquote class="mission">“To pioneer innovative solutions that enhance the health and well-being of people and their animal companions — setting new benchmarks in evidence-based healthcare.”</blockquote>
+      <a href="#contact" class="btn btn-gold">Work with us</a>
     </div>
   </div>
 </section>
 
 <!-- CONTACT -->
-<section class="contact" id="contact">
-  <div class="container">
-    <div class="contact-inner">
-      <div class="contact-left reveal">
-        <div class="section-eyebrow">
-          <div class="eyebrow-line"></div>
-          <span class="eyebrow-text" style="color:rgba(192,155,91,0.8);">Get In Touch</span>
-        </div>
-        <h2 class="section-h2">Begin Your <em>Regulatory</em> Journey</h2>
-        <p>Ready to bring your product to market? Our team is committed to helping you navigate the FDA landscape with confidence and precision.</p>
-        <div class="contact-info-row">
-          <span class="contact-info-label">Phone</span>
-          <span class="contact-info-value">448-777-3803</span>
-        </div>
-        <div class="contact-info-row">
-          <span class="contact-info-label">Email</span>
-          <span class="contact-info-value">info@epigenixinno.com</span>
-        </div>
-        <div class="contact-info-row">
-          <span class="contact-info-label">Focus</span>
-          <span class="contact-info-value">FDA 510(K) · Pet Pharma · Diagnostics</span>
-        </div>
-      </div>
-
-      <div class="contact-form reveal">
-        <div class="form-row">
-          <div class="form-group">
-            <label class="form-label">First Name</label>
-            <input class="form-input" type="text" placeholder="John">
-          </div>
-          <div class="form-group">
-            <label class="form-label">Last Name</label>
-            <input class="form-input" type="text" placeholder="Doe">
-          </div>
-        </div>
-        <div class="form-group">
-          <label class="form-label">Company / Organization</label>
-          <input class="form-input" type="text" placeholder="Your company">
-        </div>
-        <div class="form-group">
-          <label class="form-label">Email Address</label>
-          <input class="form-input" type="email" placeholder="john@company.com">
-        </div>
-        <div class="form-group">
-          <label class="form-label">Inquiry</label>
-          <textarea class="form-input" placeholder="Describe your product and regulatory needs..."></textarea>
-        </div>
-        <div class="form-submit">
-          <button class="btn-primary" id="submitBtn">Send Inquiry</button>
-        </div>
-      </div>
+<section class="contact dark" id="contact">
+  <div class="container contact-layout">
+    <div class="reveal">
+      <div class="eyebrow"><span>Request a quote</span></div>
+      <h2 class="title">Tell us about your <em>program</em></h2>
+      <p class="lead">Share your product, target (human or animal species) and current stage. We will reply with the studies required, an indicative budget and a timeline.</p>
+      <div class="info-row"><span>Phone</span><a href="tel:+14487773803">+1 448-777-3803</a></div>
+      <div class="info-row"><span>Email</span><a href="mailto:info@epigenixinno.com">info@epigenixinno.com</a></div>
+      <div class="info-row"><span>Focus</span><p>Human health CRO · Animal health CRO &amp; registration</p></div>
     </div>
+    <form id="inquiryForm" class="reveal" novalidate>
+      <div class="row2">
+        <label>First name<input name="first" type="text" placeholder="John"></label>
+        <label>Last name<input name="last" type="text" placeholder="Doe"></label>
+      </div>
+      <label>Company / organization<input name="company" type="text" placeholder="Your company"></label>
+      <label>Email address<input name="email" type="email" placeholder="john@company.com"></label>
+      <div class="row2">
+        <label>Pillar
+          <select name="pillar" id="pillarSel">
+            <option>Human health</option>
+            <option>Animal health</option>
+            <option>Both</option>
+          </select>
+        </label>
+        <label>Service of interest
+          <select name="service">
+            <option>A · Preclinical efficacy (Non-GLP)</option>
+            <option>B · Toxicity / safety (GLP)</option>
+            <option>C · Clinical / field trials (GCP)</option>
+            <option>D · Diagnostic kit evaluation</option>
+            <option>E · Registration &amp; approval</option>
+            <option>Full program</option>
+          </select>
+        </label>
+      </div>
+      <label>Inquiry<textarea name="message" placeholder="Product, target species or population, current data and timeline..."></textarea></label>
+      <button type="submit" class="btn btn-gold">Send inquiry</button>
+      <p class="form-note">Submitting opens your email app with this message ready to send to info@epigenixinno.com.</p>
+    </form>
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
-  <div class="footer-brand">
-    <div class="footer-logo-mark">EI</div>
-    <span class="footer-brand-text">Epigenix Innovation Global Co., Ltd.</span>
+  <div class="container foot">
+    <div class="foot-brand"><div class="logo-mark">EI</div>Epigenix Innovation Global Co., Ltd.</div>
+    <div>© 2026 Epigenix Innovation Global Co., Ltd. All rights reserved.</div>
   </div>
-  <ul class="footer-links">
-    <li><a href="#">Privacy</a></li>
-    <li><a href="#">Terms</a></li>
-    <li><a href="#">Sitemap</a></li>
-  </ul>
-  <div class="footer-copy">© 2025 Epigenix Innovation Global Co., Ltd.</div>
 </footer>
 
 <script>
-  const reveals = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
-      if (entry.isIntersecting) {
-        setTimeout(() => entry.target.classList.add('visible'), i * 80);
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.12 });
-  reveals.forEach(el => observer.observe(el));
+  const menuBtn = document.getElementById('menuBtn');
+  const navLinks = document.getElementById('navLinks');
+  menuBtn.addEventListener('click', () => navLinks.classList.toggle('open'));
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
 
-  document.getElementById('submitBtn').addEventListener('click', function() {
-    this.textContent = 'Sending...';
-    setTimeout(() => {
-      this.textContent = 'Inquiry Sent ✓';
-      this.style.background = '#3B6D11';
-      this.style.color = '#fff';
-    }, 1200);
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } });
+  }, { threshold: 0.06 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // Animal process tabs
+  document.querySelectorAll('.tab').forEach(t => t.addEventListener('click', () => {
+    document.querySelectorAll('.tab').forEach(x => x.classList.toggle('on', x === t));
+    ['drug', 'kit'].forEach(id => document.getElementById(id).classList.toggle('hide', id !== t.dataset.tab));
+  }));
+
+  // Pillar quote links preselect the pillar
+  document.querySelectorAll('[data-pillar]').forEach(a => a.addEventListener('click', () => {
+    document.getElementById('pillarSel').value = a.dataset.pillar;
+  }));
+  document.querySelectorAll('.pcard').forEach(a => a.addEventListener('click', () => {
+    document.getElementById('pillarSel').value = a.getAttribute('href') === '#animal' ? 'Animal health' : 'Human health';
+  }));
+
+  document.getElementById('inquiryForm').addEventListener('submit', e => {
+    e.preventDefault();
+    const f = e.target;
+    if (!f.first.value.trim() || !f.email.value.trim()) { alert('Please enter your name and email address.'); return; }
+    const name = (f.first.value + ' ' + f.last.value).trim();
+    const subject = 'Quote request [' + f.pillar.value + ']: ' + f.service.value + ' — ' + (f.company.value || name);
+    const body = 'Name: ' + name + '\nCompany: ' + f.company.value + '\nEmail: ' + f.email.value +
+      '\nPillar: ' + f.pillar.value + '\nService: ' + f.service.value + '\n\n' + f.message.value;
+    window.location.href = 'mailto:info@epigenixinno.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
   });
 </script>
 </body>
